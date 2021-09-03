@@ -9,7 +9,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-20.04
-    if: github.repository == 'jordantheitguy.com/isconfigmgrdead.com'
+    if: github.repository == 'JordanTheITGuy/isconfigmgrdead.com'
     steps:
       - uses: actions/checkout@v2
         with:
@@ -33,6 +33,7 @@ jobs:
         if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          external_repository: JordanTheITGuy/isconfigmgrdead.com
           publish_dir: ./public
           publish_branch: main
           keep_files: false
