@@ -9,7 +9,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-20.04
-    if: github.repository == 'JordanTheITGuy/isconfigmgrdead.com'
+    if: github.repository == 'JordanTheITGuy/isconfigmgrdead.com-hugo'
     steps:
       - uses: actions/checkout@v2
         with:
