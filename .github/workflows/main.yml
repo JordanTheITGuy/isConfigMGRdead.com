@@ -1,10 +1,9 @@
-name: github pages
+name: Build Website
 
 on:
   push:
     branches:
       - main  # Set a branch to deploy
-  pull_request:
 
 jobs:
   deploy:
@@ -25,12 +24,8 @@ jobs:
       - name: Build
         run: hugo --minify
         
-      - name: Create cname file
-        run: echo 'isconfigmgrdead.com' > public/CNAME
-
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           external_repository: JordanTheITGuy/isconfigmgrdead.com
