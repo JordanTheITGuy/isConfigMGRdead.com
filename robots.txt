@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://isconfigmgrdead.com/sitemap.xml
